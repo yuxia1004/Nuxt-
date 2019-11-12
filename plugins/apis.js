@@ -1,5 +1,6 @@
 import Vue from "vue"
 import axios from "axios"
+
 class Apis  {
     getTestData(){
         axios({
@@ -11,3 +12,4 @@ class Apis  {
     }    
 }
 Vue.prototype.$apis=new Apis();
+

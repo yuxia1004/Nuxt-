@@ -23,13 +23,15 @@ module.exports = {
       type: 'image/x-icon',
       href: '/favicon.ico'
     }],
-    script: [
-      {
-          src: './vconsole.min.js',
+    script: [{
+        src: './vconsole.min.js',
       },
       // 可以写入 js代码
-      {innerHTML: 'new VConsole()',  type: 'text/javascript'}
-  ]   
+      {
+        innerHTML: 'new VConsole()',
+        type: 'text/javascript'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -71,7 +73,8 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/proxy'
   ],
   styleResources: {
     scss: './assets/index.scss'
@@ -90,5 +93,14 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  proxy: {
+    '/bsk': {
+      target: 'http://m.bestcake.com', // 代理地址
+      changeOrigin: true,
+      pathRewrite: {
+        '^/bsk': '', //将 /api 替换掉
+      },
+    }
   }
 }
