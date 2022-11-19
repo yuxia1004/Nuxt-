@@ -16,7 +16,7 @@
     "express": "^4.16.4",
     "iview": "^3.1.5",
     "lib-flexible": "^0.3.2",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "storejs": "^1.0.25"
   },
   "devDependencies": {
