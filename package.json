@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "cross-env": "^5.2.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "iview": "^3.1.5",
     "lib-flexible": "^0.3.2",
     "nuxt": "^2.0.0",
